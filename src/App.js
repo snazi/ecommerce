@@ -2,9 +2,18 @@ import React from 'react';
 import './App.css';
 
 //import for router
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 import HomePage from  './pages/HomePage'
+
+const HomePageTest = () => {
+  return (
+    <div>
+      <Link to="/topics">Press this to change URL</Link>
+      <h1>Home Page</h1>
+    </div>
+  )
+}
 
 const HatsPage = () => {
     return (
@@ -22,10 +31,10 @@ const TopicsList = () => {
   )
 }
 
-const TopicDetail = () => {
+const TopicDetail = (props) => {
   return (
     <div>
-      <h1>Topics Detailz</h1>
+      <h1>Topics Detailz {props.match.params.topicId}</h1>
     </div>
   )
 }
@@ -33,7 +42,7 @@ const TopicDetail = () => {
 function App() {
   return (
     <div>
-      <Route exact path='/' component={HomePage} />
+      <Route exact path='/' component={HomePageTest} />
       <Route exact path='/hats' component={HatsPage} />
       <Route exact path='/topics' component={TopicsList} />
       <Route exact path='/topics/:topicId' component={TopicDetail} />
