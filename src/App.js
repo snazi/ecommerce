@@ -6,10 +6,10 @@ import { Route, Link } from 'react-router-dom'
 
 import HomePage from  './pages/HomePage'
 
-const HomePageTest = () => {
+const HomePageTest = (props) => {
   return (
     <div>
-      <Link to="/topics">Press this to change URL</Link>
+     <button onClick={() => props.history.push('/topics')}>Go to topics page</button>
       <h1>Home Page</h1>
     </div>
   )
