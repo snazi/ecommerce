@@ -42,7 +42,7 @@ const TopicDetail = (props) => {
 function App() {
   return (
     <div>
-      <Route exact path='/' component={HomePageTest} />
+      <Route exact path='/' component={HomePage} />
       <Route exact path='/hats' component={HatsPage} />
       <Route exact path='/topics' component={TopicsList} />
       <Route exact path='/topics/:topicId' component={TopicDetail} />
