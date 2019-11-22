@@ -5,6 +5,7 @@ import './App.css';
 import { Route, Link } from 'react-router-dom'
 
 import HomePage from  './pages/HomePage'
+import ShopPage from './pages/ShopPage'
 
 const HomePageTest = (props) => {
   return (
@@ -43,9 +44,7 @@ function App() {
   return (
     <div>
       <Route exact path='/' component={HomePage} />
-      <Route exact path='/hats' component={HatsPage} />
-      <Route exact path='/topics' component={TopicsList} />
-      <Route exact path='/topics/:topicId' component={TopicDetail} />
+      <Route exact path='/shop' component={ShopPage} />
     </div>
   );
 }
